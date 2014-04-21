@@ -250,7 +250,7 @@ module Jpmobile
         s.force_encoding(from) unless s.encoding == from_enc
       end
 
-      s.encode(to)
+      s.encode(to, invalid: :replace, undef: :replace, replace: "")
     end
 
     def set_encoding(str, encoding)
